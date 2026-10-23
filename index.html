@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#141927" />
+<title>Holdings · Trading Terminal</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ TOP TICKER ============ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="tick"><b class="t-name">NIFTY 50</b><span class="t-val">22,600.00</span><span class="t-chg down">-87.65 (-0.39%)</span><span class="t-exp">Exp. 27 Oct</span></span>
+    <span class="tick"><b class="t-name">BANKNIFTY</b><span class="t-val">54,287.35</span><span class="t-chg down">-638.35 (-1.16%)</span><span class="t-exp">Exp. 27 Oct</span></span>
+    <span class="tick"><b class="t-name">SENSEX</b><span class="t-val">73,123.83</span><span class="t-chg down">-125.56 (-0.17%)</span><span class="t-exp">Exp. 29 Oct</span></span>
+    <span class="tick"><b class="t-name">FINNIFTY</b><span class="t-val">24,403.00</span><span class="t-chg down">-254.70 (-1.03%)</span><span class="t-exp">Exp. 27 Oct</span></span>
+  </div>
+  <span class="ticker-end" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h4L20 8l-4-4L4 16v4z"/></svg>
+  </span>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <span class="menu-btn icon-btn" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </span>
+
+  <a class="brand" href="#">
+    <span class="logo">up</span>
+    <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6l4 4 4-4"/></svg>
+  </a>
+
+  <div class="pnl">
+    <span class="pnl-item">Hol. Total P&L <b class="up">+1,02,689.48</b></span>
+    <span class="pnl-item hide-sm">Pos. Total P&L: <b class="up">+3,870.00</b></span>
+    <span class="icon-btn hide-sm svg-eye" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
+    </span>
+  </div>
+
+  <nav class="main-nav">
+    <a href="#">Home</a>
+    <a href="#">My List</a>
+    <a href="#">Orders</a>
+    <a href="#">Positions</a>
+    <a class="active" href="#">Holdings</a>
+    <a class="more" href="#">More
+      <svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6l4 4 4-4"/></svg>
+    </a>
+  </nav>
+
+  <div class="search hide-md">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input type="text" placeholder="Search" />
+  </div>
+
+  <button class="funds-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6"/><circle cx="16.5" cy="14" r="1.2" fill="currentColor" stroke="none"/></svg>
+    <span class="funds-txt">Funds</span>
+  </button>
+
+  <span class="avatar hide-sm">AP</span>
+
+  <span class="icon-btn" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><circle cx="5" cy="5" r="1.7"/><circle cx="12" cy="5" r="1.7"/><circle cx="19" cy="5" r="1.7"/><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="19" r="1.7"/><circle cx="19" cy="19" r="1.7"/></svg>
+  </span>
+</header>
+
+<div class="layout">
+
+  <!-- ============ WATCHLIST SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="side-pages">
+      <span class="pg nav">
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3L5 8l5 5"/></svg>
+      </span>
+      <span class="pg">1</span>
+      <span class="pg active">2</span>
+      <span class="pg">3</span>
+      <span class="pg">4</span>
+      <span class="pg">5</span>
+      <span class="pg">6</span>
+      <span class="pg">7</span>
+      <span class="pg nav">
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3l5 5-5 5"/></svg>
+      </span>
+      <span class="pg dots more-dots">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+      </span>
+    </div>
+
+    <div class="list-meta">
+      <span class="scope">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="5"/><rect x="3" y="13" width="8" height="8" rx="5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+        <b>f & o</b>
+        <svg class="chk" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg>
+        <span class="count">6 / 200</span>
+      </span>
+      <span class="side-actions">
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+        </span>
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 7h16M4 12h10M4 17h16"/></svg>
+        </span>
+        <span class="add-square">+</span>
+      </span>
+    </div>
+
+    <div class="side-owner">by You</div>
+
+    <ul class="watchlist">
+      <li>
+        <div class="w-info"><b class="w-name">SENSEX</b><small class="w-sub">NSE INDEX</small></div>
+        <div class="w-nums"><b class="w-ltp down">73,123.83</b><small class="w-chg down">-125.56 (-0.17%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">BANKBEES</b><small class="w-sub">NSE EQ</small></div>
+        <div class="w-nums"><b class="w-ltp down">561.50</b><small class="w-chg down">-6.83 (-1.20%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">NIFTYBEES</b><small class="w-sub">NSE EQ</small></div>
+        <div class="w-nums"><b class="w-ltp down">257.22</b><small class="w-chg down">-1.72 (-0.66%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">FINNIFTY</b><small class="w-sub">NSE INDEX</small></div>
+        <div class="w-nums"><b class="w-ltp down">24,403.00</b><small class="w-chg down">-254.70 (-1.03%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">BANKNIFTY</b><small class="w-sub">NSE INDEX</small></div>
+        <div class="w-nums"><b class="w-ltp down">54,287.35</b><small class="w-chg down">-638.35 (-1.16%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">NIFTY</b><small class="w-sub">NSE INDEX</small></div>
+        <div class="w-nums"><b class="w-ltp down">22,600.00</b><small class="w-chg down">-87.65 (-0.39%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">RELIANCE</b><small class="w-sub">NSE EQ</small></div>
+        <div class="w-nums"><b class="w-ltp up">1,298.55</b><small class="w-chg up">+8.30 (+0.64%)</small></div>
+      </li>
+      <li>
+        <div class="w-info"><b class="w-name">HDFCBANK</b><small class="w-sub">NSE EQ</small></div>
+        <div class="w-nums"><b class="w-ltp down">1,708.20</b><small class="w-chg down">-12.45 (-0.72%)</small></div>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="content">
+
+    <div class="content-head">
+      <div class="tabs">
+        <span class="tab active">Stocks <span class="cnt">(13)</span></span>
+        <span class="tab">Mutual Funds</span>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <span class="tool-left">
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16l-6.5 7.5V19l-3-1.5v-5z"/></svg>
+        </span>
+        <span class="pill">Sectors
+          <svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6l4 4 4-4"/></svg>
+        </span>
+      </span>
+      <span class="tool-right">
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </span>
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+        </span>
+        <span class="icon-btn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
+        </span>
+        <span class="icon-btn hide-sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="fab">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.6 12h10.8l2-8H6.2"/></svg>
+        </span>
+      </span>
+    </div>
+
+    <section class="stats">
+      <div class="stat current">
+        <small>Current value</small>
+        <div class="big">4,00,487<span>.70</span></div>
+      </div>
+      <div class="stat">
+        <small>Invested</small>
+        <div class="val">3,65,400.30</div>
+      </div>
+      <div class="stat">
+        <small>Total P&L</small>
+        <div class="val up">+35,087.40 <small>(+9.60%)</small></div>
+      </div>
+      <div class="stat">
+        <small>Day's P&L <span class="swap">‹ ›</span></small>
+        <div class="val down">-8,779.10 <small>(-2.15%)</small></div>
+      </div>
+    </section>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="sym">Symbol <span class="cnt">(13)</span>
+              <svg class="sort" viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12V4M5 7l3-3 3 3"/></svg>
+            </th>
+            <th>Qty.</th>
+            <th>Pledged</th>
+            <th>Avg. price</th>
+            <th>LTP</th>
+            <th>Day P&L</th>
+            <th>Day %</th>
+            <th>Overall P&L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sym">BEL</td><td>44</td><td class="muted">--</td><td>272.50</td>
+            <td class="down">367.00</td><td class="down">-88.00</td><td class="down">-0.54%</td><td class="up">+4,158.00</td>
+          </tr>
+          <tr>
+            <td class="sym">CDSL</td><td>40</td><td class="muted">--</td><td>1,191.00</td>
+            <td class="down">1,188.50</td><td class="down">-1,460.00</td><td class="down">-2.98%</td><td class="down">-100.00</td>
+          </tr>
+          <tr>
+            <td class="sym">GREAVESCOT</td><td>60</td><td class="muted">--</td><td>231.53</td>
+            <td class="down">183.52</td><td class="down">-513.60</td><td class="down">-4.46%</td><td class="down">-2,880.60</td>
+          </tr>
+          <tr>
+            <td class="sym">IRCTC</td><td>150</td><td class="muted">--</td><td>512.29</td>
+            <td class="down">441.40</td><td class="down">-1,479.00</td><td class="down">-2.19%</td><td class="down">-10,633.50</td>
+          </tr>
+          <tr>
+            <td class="sym">IREDA</td><td>100</td><td class="muted">--</td><td>147.79</td>
+            <td class="down">100.27</td><td class="down">-234.00</td><td class="down">-2.28%</td><td class="down">-4,752.00</td>
+          </tr>
+          <tr>
+            <td class="sym">IEX</td><td>110</td><td class="muted">--</td><td>218.40</td>
+            <td class="down">196.15</td><td class="down">-1,237.50</td><td class="down">-5.42%</td><td class="down">-2,447.50</td>
+          </tr>
+          <tr>
+            <td class="sym">ITC</td><td>60</td><td class="muted">--</td><td>412.75</td>
+            <td class="down">446.85</td><td class="down">-342.00</td><td class="down">-1.26%</td><td class="up">+2,046.00</td>
+          </tr>
+          <tr>
+            <td class="sym">JIOFIN</td><td>100</td><td class="muted">--</td><td>304.68</td>
+            <td class="down">301.00</td><td class="down">-530.00</td><td class="down">-1.73%</td><td class="down">-368.00</td>
+          </tr>
+          <tr>
+            <td class="sym">MCX</td><td>50</td><td class="muted">--</td><td>1,000.00</td>
+            <td class="down">1,900.00</td><td class="down">-1,620.00</td><td class="down">-1.68%</td><td class="up">+45,000.00</td>
+          </tr>
+          <tr>
+            <td class="sym">NSDL</td><td>30</td><td class="muted">--</td><td>855.00</td>
+            <td class="down">900.00</td><td class="down">-450.00</td><td class="down">-1.64%</td><td class="up">+1,350.00</td>
+          </tr>
+          <tr>
+            <td class="sym">RVNL</td><td>40</td><td class="muted">--</td><td>348.60</td>
+            <td class="down">380.00</td><td class="down">-342.00</td><td class="down">-2.20%</td><td class="up">+1,256.00</td>
+          </tr>
+          <tr>
+            <td class="sym">SBIN</td><td>20</td><td class="muted">--</td><td>772.40</td>
+            <td class="down">838.20</td><td class="down">-186.00</td><td class="down">-1.10%</td><td class="up">+1,316.00</td>
+          </tr>
+          <tr>
+            <td class="sym">TATAPOWER</td><td>90</td><td class="muted">--</td><td>177.30</td>
+            <td class="down">190.00</td><td class="down">-297.00</td><td class="down">-1.71%</td><td class="up">+1,143.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<!-- ============ MOBILE BOTTOM NAV ============ -->
+<nav class="bottom-nav">
+  <a href="#">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    Home
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.7 5.6 6.3.8-4.6 4.2 1.2 6.1L12 16.8 6.4 19.7l1.2-6.1L3 9.4l6.3-.8z"/></svg>
+    My List
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+    Orders
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M14 2.5A9 9 0 0 1 21.5 10H14z"/></svg>
+    Positions
+  </a>
+  <a class="active" href="#">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>
+    Holdings
+  </a>
+</nav>
+
+</body>
+</html>
